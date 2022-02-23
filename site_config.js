@@ -1,8 +1,8 @@
 const config = {
-    title: 'prpr.nya!',
+    title: 'prpr.nya?',
     description: 'Supercalifragilisticexpialidocious!',
-    base: 'https://ruavan.cat',
-    favicon: 'https://ruavan.cat/favicon-32x32.png',
+    base: 'https://ruavan.com',
+    favicon: 'https://ruavan.com/favicon.ico',
 };
 
 export default config;
