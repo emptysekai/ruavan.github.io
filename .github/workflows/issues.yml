@@ -1,0 +1,29 @@
+name: close-issues-of-utterfaces
+
+on:
+  issues:
+    types:
+      - opened
+      - edited
+      - labeled
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/*.yml
+
+permissions:
+  issues: write
+
+jobs:
+  close:
+    name: Close Issues of Utterances
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/stale@v4
+        with:
+          any-of-issue-labels: utterances
+          days-before-issue-stale: 0
+          days-before-issue-close: 0
+          ignore-issue-updates: true
+          remove-issue-stale-when-updated: false
